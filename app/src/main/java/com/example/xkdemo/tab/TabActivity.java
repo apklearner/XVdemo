@@ -41,7 +41,8 @@ public class TabActivity extends AppCompatActivity {
         viewPager.setAdapter(new MyFragmentPageAdater(getSupportFragmentManager()));
 
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setTabPaddingLeftAndRight(20,20);
+//        tabLayout.setTabPaddingLeftAndRight(20,20);
+//        tabLayout.setTabMarginLeftAndRight(20,20);
 
 //        tabLayout.setLastSelectedTabPosition(4);
 //        tabLayout.setCurrentItem(4);
