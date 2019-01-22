@@ -46,6 +46,7 @@ public class TabActivity extends AppCompatActivity {
 
 //        tabLayout.setLastSelectedTabPosition(4);
 //        tabLayout.setCurrentItem(4);
+//        viewPager.setOffscreenPageLimit(titles.length);
 
 
     }
