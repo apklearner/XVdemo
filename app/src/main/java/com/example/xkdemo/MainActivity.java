@@ -7,12 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.xkdemo.channel.ChannelActivity;
+import com.example.xkdemo.item.NewsListActivity;
 import com.example.xkdemo.pin.PinnedListActivity;
 import com.example.xkdemo.tab.TabActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnChannel, btnPin, btnTab;
+    private Button btnChannel, btnPin, btnTab, btnList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +27,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnChannel = findViewById(R.id.btn_channel);
         btnPin = findViewById(R.id.btn_pinned);
         btnTab = findViewById(R.id.btn_tab);
+        btnList = findViewById(R.id.btn_list);
 
         btnChannel.setOnClickListener(this);
         btnPin.setOnClickListener(this);
         btnTab.setOnClickListener(this);
+        btnList.setOnClickListener(this);
     }
 
     @Override
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_tab:
                 startActivity(new Intent(this, TabActivity.class));
+                break;
+            case R.id.btn_list:
+                startActivity(new Intent(this, NewsListActivity.class));
                 break;
         }
     }

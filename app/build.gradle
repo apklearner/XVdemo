@@ -8,7 +8,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.xkdemo"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -59,6 +59,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
 }
 
 dependencies {
@@ -71,6 +76,10 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:27.0.1'
     //    compile 'me.weyye.ColorTrackTabLayout:library:1.0.1'
     implementation 'com.android.support:design:27.1.1'
+    implementation 'cn.jzvd:jiaozivideoplayer:6.4.1'
+
+    implementation 'jp.wasabeef:glide-transformations:3.3.0'
+
 //    implementation 'in.srain.cube:ultra-ptr:1.0.11'
 
 }
