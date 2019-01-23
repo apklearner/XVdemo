@@ -10,10 +10,11 @@ import com.example.xkdemo.channel.ChannelActivity;
 import com.example.xkdemo.item.NewsListActivity;
 import com.example.xkdemo.pin.PinnedListActivity;
 import com.example.xkdemo.tab.TabActivity;
+import com.example.xkdemo.web.WebViewActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnChannel, btnPin, btnTab, btnList;
+    private Button btnChannel, btnPin, btnTab, btnList, btnWeb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPin = findViewById(R.id.btn_pinned);
         btnTab = findViewById(R.id.btn_tab);
         btnList = findViewById(R.id.btn_list);
+        btnWeb = findViewById(R.id.btn_web);
 
         btnChannel.setOnClickListener(this);
         btnPin.setOnClickListener(this);
         btnTab.setOnClickListener(this);
         btnList.setOnClickListener(this);
+        btnWeb.setOnClickListener(this);
     }
 
     @Override
@@ -49,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_list:
                 startActivity(new Intent(this, NewsListActivity.class));
+                break;
+            case R.id.btn_web:
+                startActivity(new Intent(this, WebViewActivity.class));
                 break;
         }
     }

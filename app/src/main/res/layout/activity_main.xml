@@ -31,5 +31,11 @@
         android:layout_height="wrap_content"
         android:text="List"
         android:textAllCaps="false" />
+    <Button
+        android:id="@+id/btn_web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Web"
+        android:textAllCaps="false" />
 
 </LinearLayout>

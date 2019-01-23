@@ -21,17 +21,19 @@ public class PinnedListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pinned);
 
 
+
+        configData();
+    }
+
+    private void configData() {
+
+
         recyclerView = findViewById(R.id.recyclerview);
 
         LinearLayoutManager manager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(manager);
         recyclerView.setAdapter(adapter = new PinnedListAdapter(data));
         recyclerView.addItemDecoration(new PinnedHeaderItemDecoration());
-
-        configData();
-    }
-
-    private void configData() {
 
         data.clear();
         for (int i = 0; i < 10; i++) {

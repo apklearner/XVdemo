@@ -28,6 +28,8 @@
             android:name=".item.NewsListActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
+
+        <activity android:name=".web.WebViewActivity" />
     </application>
 
 </manifest>

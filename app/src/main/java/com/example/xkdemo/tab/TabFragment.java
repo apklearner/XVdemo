@@ -40,6 +40,7 @@ public class TabFragment extends Fragment {
     private int height;
     private Scroller scroller;
     private Handler handler = new Handler();
+    private final int CLOSE_DURATION = 800;
 
 
     @Nullable
@@ -95,12 +96,14 @@ public class TabFragment extends Fragment {
                     public void run() {
                         PtrIndicator.setPosSecond(height);
                         ptr_layout.refreshComplete();
-                        scroller.startScroll(0, -height, 0, height, 1000);
+                        scroller.startScroll(0, -height, 0, height, CLOSE_DURATION);
                         handler.post(taskRunner);
                     }
                 }, 2500);
             }
         });
+
+        ptr_layout.setDurationToCloseHeader(CLOSE_DURATION);
 
     }
 
@@ -119,12 +122,12 @@ public class TabFragment extends Fragment {
             } else if (PtrIndicator.getPosStart() != 0) {
                 PtrIndicator.setPosSecond(0);
                 ptr_layout.refreshComplete();
-                scroller.startScroll(0, 0, 0, -height, 1000);
+                scroller.startScroll(0, 0, 0, -height, CLOSE_DURATION);
                 handler.post(taskRunner);
             } else {
                 RelativeLayout.LayoutParams params = (RelativeLayout.LayoutParams) tvTitle.getLayoutParams();
                 if (params.topMargin == 0) {
-                    scroller.startScroll(0, 0, 0, -height, 1000);
+                    scroller.startScroll(0, 0, 0, -height, CLOSE_DURATION);
                     handler.post(taskRunner);
                 }
             }
