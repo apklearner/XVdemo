@@ -30,4 +30,10 @@ public class MyJzvdStu extends JzvdStd {
     public void setVideoListener(OnVideoListener listener) {
         this.listener = listener;
     }
+
+    @Override
+    public void onStateNormal() {
+        super.onStateNormal();
+        if (listener != null) listener.onStateNormal();
+    }
 }

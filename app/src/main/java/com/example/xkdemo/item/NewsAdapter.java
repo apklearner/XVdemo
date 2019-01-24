@@ -69,7 +69,9 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 break;
             case TYPE_VIDEO:
                 ViewHolderVideo video = (ViewHolderVideo) holder;
-                Jzvd.releaseAllVideos();
+//                Jzvd.releaseAllVideos();
+//                video.jzvdStd.
+//                Jzvd.
                 video.tvTime.setVisibility(View.VISIBLE);
                 video.jzvdStd.setUp("http://vjs.zencdn.net/v/oceans.mp4", "标题", Jzvd.SCREEN_WINDOW_LIST);
                 video.jzvdStd.thumbImageView.setScaleType(ImageView.ScaleType.FIT_XY);
@@ -77,6 +79,11 @@ public class NewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                     @Override
                     public void onStart() {
                         video.tvTime.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onStateNormal() {
+                        video.tvTime.setVisibility(View.VISIBLE);
                     }
                 });
 //                video.jzvdStd.thumbImageView.setImageResource(R.mipmap.ic_channel_edit);
